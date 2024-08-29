@@ -15,7 +15,9 @@
         android:text="@string/main_title"
         android:textAlignment="center"
         android:textColor="@color/blue"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        />
 
 
 </LinearLayout>
