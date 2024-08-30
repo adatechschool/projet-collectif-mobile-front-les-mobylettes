@@ -1,34 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Vue avec fond bleu -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_background"/> <!-- Bleu -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.5"
+        android:src="@drawable/la_bonne_soeurf"
+        android:contentDescription="@string/image_information"/>
+
+    <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_background"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+    
+    
     <me.grantland.widget.AutofitTextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/autoFitTextView"
+        android:layout_width="293dp"
         android:layout_height="84dp"
         android:layout_gravity="center"
         android:autoSizeTextType="uniform"
         android:fontFamily="@font/poppins_blackitalic"
         android:text="@string/main_title"
         android:textAlignment="center"
-        android:textColor="@color/blue" />
+        android:textColor="@color/blue"
+        tools:ignore="UnusedAttribute" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="end"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:alpha="0.5"
-        android:src="@drawable/la_bonne_soeurf"
-        android:contentDescription="@string/image_information"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/main_user_identification"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginTop="128dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnRegister"
@@ -47,4 +75,5 @@
         android:layout_marginBottom="24dp"
         android:text="@string/main_login_button" />
 
-</LinearLayout>
+    </LinearLayout>
+</FrameLayout>
