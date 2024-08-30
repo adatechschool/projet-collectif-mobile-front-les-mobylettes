@@ -8,16 +8,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <me.grantland.widget.AutofitTextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
         android:autoSizeTextType="uniform"
+        android:fontFamily="@font/poppins_blackitalic"
         android:text="@string/main_title"
         android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:fontFamily="@font/poppins_blackitalic"/>
-
+        android:textColor="@color/blue" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -26,7 +27,8 @@
         android:layout_weight="1"
         android:adjustViewBounds="true"
         android:alpha="0.5"
-        android:src="@drawable/la_bonne_soeurf" />
+        android:src="@drawable/la_bonne_soeurf"
+        android:contentDescription="@string/image_information"/>
 
     <Button
         android:id="@+id/btnRegister"
@@ -34,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Register" />
+        android:text="@string/main_registration_button" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -43,6 +45,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Login" />
+        android:text="@string/main_login_button" />
 
 </LinearLayout>
