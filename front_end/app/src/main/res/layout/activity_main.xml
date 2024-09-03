@@ -77,6 +77,14 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/main_login_button"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btnSpotList"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/list_spot_button"
             android:layout_gravity="center_horizontal"/>
 
         <!-- Vue vide pour espacer les éléments vers le bas -->

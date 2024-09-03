@@ -10,6 +10,7 @@
     <string name="app_information">Les meilleurs spots de surf</string>
     <string name="image_information">Nonne qui surf</string>
     <string name="main_user_identification">example@email.com</string>
+    <string name="main_list_spot_button">Cherche ton Spot</string>
 
 
 </resources>

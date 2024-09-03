@@ -31,20 +31,28 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnRegister;
     private Button btnLogin;
+    private Button btnSpotList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
 
         autoFitTextView = findViewById(R.id.autoFitTextView);
         Typeface typeface = ResourcesCompat.getFont(this, R.font.poppins_regular);
         autoFitTextView.setTypeface(typeface);
 
+
+
         btnRegister = findViewById(R.id.btnRegister);
         btnLogin = findViewById(R.id.btnLogin);
+        btnSpotList = findViewById(R.id.btnSpotList);
 
 
         //setSupportActionBar(binding.toolbar);
@@ -52,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         //NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
        // appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+
+
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,12 +73,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Action pour le bouton Login
                 Toast.makeText(MainActivity.this, "Login button clicked", Toast.LENGTH_SHORT).show();
                 // Ajoutez ici la logique pour la connexion
+            }
+        });
+
+
+
+
+
+
+        btnSpotList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Action pour le bouton Register
+                Toast.makeText(MainActivity.this, "Register button clicked", Toast.LENGTH_SHORT).show();
+                // Ajoutez ici la logique pour l'inscription
             }
         });
     }

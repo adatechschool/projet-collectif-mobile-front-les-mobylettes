@@ -9,6 +9,7 @@
 
     <string name="main_title">Welcome to the bonnes soeurf!</string>
     <string name="main_login_button">Log in</string>
+    <string name="list_spot_button">Find Your Spot</string>
     <string name="main_registration_button">Registration</string>
     <string name="app_information">best spots of surf</string>
     <string name="image_information">A surfing nun</string>
