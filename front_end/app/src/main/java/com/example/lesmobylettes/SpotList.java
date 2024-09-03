@@ -14,14 +14,15 @@ public class SpotList extends AppCompatActivity {
     private final String[] spots = new String[]{
             "Liste 1",
             "Liste 2",
-            "Liste 3"
+            "Liste 3",
+            "liste 4"
     };
     private ArrayAdapter<String> arrayAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.spot_list);  // Si vous avez renommé le fichier XML, remplacez `activity_main2` par le nouveau nom
+        setContentView(R.layout.spot_list);
 
         listView = findViewById(R.id.list_view_id);
 
