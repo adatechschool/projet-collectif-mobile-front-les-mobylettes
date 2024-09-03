@@ -1,5 +1,6 @@
 package com.example.lesmobylettes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -31,8 +32,12 @@ public class SpotList extends AppCompatActivity {
         // Ajouter un listener pour gérer les clics sur les éléments de la liste
         listView.setOnItemClickListener((parent, view, position, id) -> {
             SpotData.Spot selectedSpot = SpotData.SPOTS.get(position);
-            // Ici, vous pouvez ajouter du code pour afficher la description
-            // Par exemple, afficher un Toast ou ouvrir une nouvelle activité avec les détails
+
+            // Lancer Spot.java et passer les détails du spot
+            Intent intent = new Intent(SpotList.this, Spot.class);
+            intent.putExtra("spot_name", selectedSpot.nom);
+            intent.putExtra("spot_description", selectedSpot.description);
+            startActivity(intent);
         });
     }
 }

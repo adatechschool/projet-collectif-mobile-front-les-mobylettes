@@ -26,7 +26,12 @@
         <activity
             android:name=".SpotList"
             android:exported="true" />
-
+        <activity
+            android:name=".SpotData"
+            android:exported="true" />
+        <activity
+            android:name=".Spot"
+            android:exported="true" />
     </application>
 
 </manifest>

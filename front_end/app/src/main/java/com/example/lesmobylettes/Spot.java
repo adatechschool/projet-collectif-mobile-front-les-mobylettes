@@ -1,56 +1,29 @@
 package com.example.lesmobylettes;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SpotList extends AppCompatActivity {
-    private ListView listView;
+public class Spot extends AppCompatActivity {
+    private TextView nameTextView;
+    private TextView descriptionTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.spot_list);
+        setContentView(R.layout.spot); // Utilise spot.xml
 
-        listView = findViewById(R.id.list_view_id);
-        listView.setAdapter(new SpotAdapter());
-    }
+        nameTextView = findViewById(R.id.spot_name);
+        descriptionTextView = findViewById(R.id.spot_description);
 
-    private class SpotAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return SpotData.SPOTS.size();
-        }
+        // Récupérer les données envoyées via l'intent
+        Intent intent = getIntent();
+        String spotName = intent.getStringExtra("spot_name");
+        String spotDescription = intent.getStringExtra("spot_description");
 
-        @Override
-        public Object getItem(int position) {
-            return SpotData.SPOTS.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            if (convertView == null) {
-                convertView = LayoutInflater.from(SpotList.this).inflate(R.layout.spot, parent, false);
-            }
-
-            TextView nameTextView = convertView.findViewById(R.id.spot_name);
-            TextView descriptionTextView = convertView.findViewById(R.id.spot_description);
-
-            SpotData.Spot spot = SpotData.SPOTS.get(position);
-            nameTextView.setText(spot.nom);
-            descriptionTextView.setText(spot.description);
-
-            return convertView;
-        }
+        // Afficher les données
+        nameTextView.setText(spotName);
+        descriptionTextView.setText(spotDescription);
     }
 }
