@@ -4,9 +4,10 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SpotList extends AppCompatActivity {
-
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
 
@@ -17,8 +18,21 @@ public class SpotList extends AppCompatActivity {
 
         listView = findViewById(R.id.list_view_id);
 
-        // ici on utlise la liste définie dans SpotData
-        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SpotData.SPOTS);
+        // Créer une liste de noms de plages à partir de SpotData.SPOTS
+        List<String> spotNames = new ArrayList<>();
+        for (SpotData.Spot spot : SpotData.SPOTS) {
+            spotNames.add(spot.nom);
+        }
+
+        // Utiliser la liste de noms pour l'ArrayAdapter
+        arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spotNames);
         listView.setAdapter(arrayAdapter);
+
+        // Ajouter un listener pour gérer les clics sur les éléments de la liste
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            SpotData.Spot selectedSpot = SpotData.SPOTS.get(position);
+            // Ici, vous pouvez ajouter du code pour afficher la description
+            // Par exemple, afficher un Toast ou ouvrir une nouvelle activité avec les détails
+        });
     }
 }
