@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:context=".MainActivity">
 
     <!-- Vue avec fond bleu -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/blue_background"/> <!-- Bleu -->
+        android:background="@drawable/blue_background" />
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -16,64 +18,91 @@
         android:adjustViewBounds="true"
         android:alpha="0.5"
         android:src="@drawable/la_bonne_soeurf"
-        android:contentDescription="@string/image_information"/>
+        android:contentDescription="@string/image_information" />
 
     <LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    
-    
-    <me.grantland.widget.AutofitTextView
-        android:id="@+id/autoFitTextView"
-        android:layout_width="293dp"
-        android:layout_height="84dp"
-        android:layout_gravity="center"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/poppins_blackitalic"
-        android:text="@string/main_title"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        tools:ignore="UnusedAttribute" />
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/autoFitTextView"
+            android:layout_width="293dp"
+            android:layout_height="84dp"
+            android:layout_gravity="center"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/poppins_blackitalic"
+            android:text="@string/main_title"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            tools:ignore="UnusedAttribute"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Champ de saisie pour l'email -->
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/main_user_identification"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/fab_margin"
-            android:layout_marginEnd="@dimen/fab_margin"
-            android:layout_marginBottom="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/rounded_edit_text"
-            android:layout_marginTop="128dp">
+            android:hint="@string/main_user_identification">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:text="@string/main_registration_button" />
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_registration_button"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/main_login_button" />
+        <!-- Bouton de connexion -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_login_button"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Vue vide pour espacer les éléments vers le bas -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp"/>
 
     </LinearLayout>
 </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
