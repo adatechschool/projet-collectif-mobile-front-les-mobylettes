@@ -1,5 +1,6 @@
 package com.example.lesmobylettes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -94,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
         btnSpotList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Action pour le bouton Register
-                Toast.makeText(MainActivity.this, "Register button clicked", Toast.LENGTH_SHORT).show();
-                // Ajoutez ici la logique pour l'inscription
+                Intent intent;
+                intent = new Intent(MainActivity.this, SpotList.class);
+                startActivity(intent);
             }
         });
     }
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         //// Inflate the menu; this adds items to the action bar if it is present.
       //  getMenuInflater().inflate(R.menu.menu_main, menu);
        // return true;
-   // }
+   // }0
 
    // @Override
     //public boolean onOptionsItemSelected(MenuItem item) {
