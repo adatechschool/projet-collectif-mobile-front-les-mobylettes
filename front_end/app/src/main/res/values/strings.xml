@@ -13,5 +13,6 @@
     <string name="main_registration_button">Registration</string>
     <string name="app_information">best spots of surf</string>
     <string name="image_information">A surfing nun</string>
-    <string name="main_user_identification">example@mail.com</string>
+    <string name="main_user_id">example@mail.com</string>
+    <string name="main_user_password">Password</string>
 </resources>

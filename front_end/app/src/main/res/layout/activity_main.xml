@@ -47,21 +47,32 @@
 
         <!-- Champ de saisie pour l'email -->
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="24dp"
+            android:padding="12dp"
             android:background="@drawable/rounded_edit_text"
-            android:hint="@string/main_user_identification">
+            android:layout_marginBottom="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:hint="@string/main_user_id"
+            android:autofillHints="emailAddress"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/main_user_password"
+            android:layout_marginBottom="16dp"
+            android:layout_marginHorizontal="12dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:autofillHints="password"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnRegister"
