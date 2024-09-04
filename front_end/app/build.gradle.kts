@@ -45,4 +45,14 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(libs.autofittextview)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+
+    implementation(libs.glide)
+    annotationProcessor("com.github.bumptech.glide:compiler:${libs.versions.glide.get()}")
+
+
 }
