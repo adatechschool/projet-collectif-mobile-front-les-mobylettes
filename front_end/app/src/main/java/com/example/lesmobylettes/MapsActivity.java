@@ -1,3 +1,5 @@
+package com.example.lesmobylettes;
+
 import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
