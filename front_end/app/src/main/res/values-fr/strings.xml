@@ -12,7 +12,10 @@
     <string name="image_information">Nonne qui surf</string>
     <string name="main_user_id">exemple@email.com</string>
     <string name="main_user_password">Mot de passe</string>
-    <string name="main_user_identification">example@email.com</string>
+    <string name="register_button">S\'enregistrer</string>
+    <string name="register">S\'enregistrer</string>
+    <string name="hint_username">Choisis ton nom d\'utilisateur</string>
+    <string name="hint_email">exemple@email.com</string>
 
 
 </resources>

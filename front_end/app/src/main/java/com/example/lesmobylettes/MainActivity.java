@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.graphics.Typeface;
 import androidx.core.content.res.ResourcesCompat;
 import android.widget.Toast;
+import android.widget.EditText;
 import me.grantland.widget.AutofitTextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
     private Button btnRegister;
     private Button btnLogin;
     private Button btnSpotList;
+    // Déclaration des variables pour les EditText
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+
+    // Informations d'identification simulées (pour l'exemple)
+    private static final String VALID_USERNAME = "user@example.com";
+    private static final String VALID_PASSWORD = "password123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +52,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-
         autoFitTextView = findViewById(R.id.autoFitTextView);
         Typeface typeface = ResourcesCompat.getFont(this, R.font.poppins_regular);
         autoFitTextView.setTypeface(typeface);
 
-
+        // Liaison des EditText avec les vues XML
+        usernameEditText = findViewById(R.id.username);
+        passwordEditText = findViewById(R.id.password);
 
         btnRegister = findViewById(R.id.btnRegister);
         btnLogin = findViewById(R.id.btnLogin);
@@ -82,8 +91,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Action pour le bouton Login
-                Toast.makeText(MainActivity.this, "Login button clicked", Toast.LENGTH_SHORT).show();
-                // Ajoutez ici la logique pour la connexion
+                // Obtenir le texte des EditText
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
+
+                // Vérifier les informations d'identification
+                if (username.equals(VALID_USERNAME) && password.equals(VALID_PASSWORD)) {
+                    // Authentification réussie
+                    Toast.makeText(MainActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
+
+                    // Passer à une autre activité (par exemple, DashboardActivity)
+                    Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                    startActivity(intent);
+                } else {
+                    // Authentification échouée
+                    Toast.makeText(MainActivity.this, "Identifiant ou mot de passe incorrect", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
