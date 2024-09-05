@@ -10,10 +10,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+/*public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap myMap;
-    private List<SurfRecord> surfRecords; // List to hold parsed surf records
+   // private List<SurfRecord> surfRecords; // List to hold parsed surf records
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +28,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // TODO: Populate surfRecords by parsing JSON data
         // Example: surfRecords = getSurfRecordsFromJson();
 
-    }
+    }*/
 
-    @Override
+  /*  @Override
     public void onMapReady(GoogleMap googleMap) {
         myMap = googleMap;
 
-        if (surfRecords != null) {
+ /       if (surfRecords != null) {
             for (SurfRecord record : surfRecords) {
                 LatLng location = getLatLngFromGeocode(record.getGeocode());
                 if (location != null) {
@@ -56,5 +56,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         return null; // or return a default location
     }
-}
+}*/
 

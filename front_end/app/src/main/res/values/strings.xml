@@ -19,5 +19,6 @@
     <string name="hint_username">Choose your username</string>
     <string name="register_button">Register</string>
     <string name="hint_email">example@email.com</string>
-    <string name ="map_api_key">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
+    <string name="hint_password">password1234</string>
+    <string name ="map_api_key" translatable="false">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
 </resources>

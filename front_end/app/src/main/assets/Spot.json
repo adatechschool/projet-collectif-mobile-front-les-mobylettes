@@ -1,0 +1,13 @@
+{
+  "records": [{
+    "surfBreak": "Reef Break",
+    "photos": "https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg",
+    "address": "Pipeline, Oahu, Hawaii"
+  },
+    {
+      "surfBreak": "Point Break",
+      "photos": "https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg",
+      "address": "Supertubes, Jeffreys Bay, South Africa"
+    }
+  ]
+}

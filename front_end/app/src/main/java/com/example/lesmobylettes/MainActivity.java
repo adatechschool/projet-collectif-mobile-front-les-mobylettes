@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Connexion réussie", Toast.LENGTH_SHORT).show();
 
                     // Passer à une autre activité (par exemple, DashboardActivity)
-                    Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-                    startActivity(intent);
+                    //Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                    //startActivity(intent);
                 } else {
                     // Authentification échouée
                     Toast.makeText(MainActivity.this, "Identifiant ou mot de passe incorrect", Toast.LENGTH_SHORT).show();

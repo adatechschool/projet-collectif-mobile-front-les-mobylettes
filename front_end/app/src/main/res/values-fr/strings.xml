@@ -16,6 +16,7 @@
     <string name="register">S\'enregistrer</string>
     <string name="hint_username">Choisis ton nom d\'utilisateur</string>
     <string name="hint_email">exemple@email.com</string>
+    <string name="hint_password">motDePasse1234</string>
 
 
 </resources>

@@ -2,30 +2,36 @@ package com.example.lesmobylettes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.bumptech.glide.Glide;
 
 public class Spot extends AppCompatActivity {
-    private TextView nameTextView;
-    private TextView descriptionTextView;
+
+    private TextView spotName;
+    private TextView spotDescription;
+    private ImageView spotImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.spot);
+        setContentView(R.layout.spot); // Ensure this layout file exists
 
-        // Initialise les TextViews en les recherchant dans le layout
-        nameTextView = findViewById(R.id.spot_name);
-        descriptionTextView = findViewById(R.id.spot_description);
+        spotName = findViewById(R.id.spot_name);
+        spotDescription = findViewById(R.id.spot_description);
+        spotImage = findViewById(R.id.spot_image); // Ensure this ImageView exists in the layout
 
-        // Récupère les données envoyées à cette activité via l'intent
         Intent intent = getIntent();
-        String spotName = intent.getStringExtra("spot_name");
-        String spotDescription = intent.getStringExtra("spot_description");
+        String surfBreak = intent.getStringExtra("surf_break");
+        String photos = intent.getStringExtra("photos");
+        String address = intent.getStringExtra("address");
 
-        // Affiche les données récupérées dans les TextViews
-        nameTextView.setText(spotName);
-        descriptionTextView.setText(spotDescription);
+        spotName.setText(surfBreak);
+        spotDescription.setText(address);
+
+        if (photos != null && !photos.isEmpty()) {
+            Glide.with(this).load(photos).into(spotImage); // Use Glide or Picasso for image loading
+        }
     }
 }
