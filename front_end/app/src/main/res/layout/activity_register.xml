@@ -1,59 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    android:background="@color/white"
     tools:context=".RegisterActivity">
 
-    <!-- Champ pour l'email -->
-    <EditText
-        android:id="@+id/email_edit_text"
+    <!-- Vue avec fond bleu -->
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_email"
-        android:inputType="textEmailAddress"
-        android:autofillHints="emailAddress"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_edit_text"
-        android:padding="12dp"
-        android:textColor="@color/black"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_background" />
 
-    <!-- Champ pour le nom d'utilisateur -->
-    <EditText
-        android:id="@+id/username_edit_text"
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_username"
-        android:inputType="textPersonName"
-        android:autofillHints="username"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/rounded_edit_text"
-        android:padding="12dp"
-        android:textColor="@color/black"/>
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:alpha="0.5"
+        android:src="@drawable/la_bonne_soeurf"
+        android:contentDescription="@string/image_information" />
 
-    <!-- Champ pour le mot de passe -->
-    <EditText
-        android:id="@+id/password_edit_text"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_password"
-        android:inputType="textPassword"
-        android:autofillHints="password"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/rounded_edit_text"
-        android:padding="12dp"
-        android:textColor="@color/black"/>
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="visible"
+        tools:context=".RegisterActivity">
 
-    <!-- Bouton de création de compte -->
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:background="@color/blue"
-        android:textColor="@color/white"/>
-</LinearLayout>
+        <!-- Champ pour l'email -->
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <!-- Champ pour le nom d'utilisateur -->
+        <EditText
+            android:id="@+id/username_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="username"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/hint_username"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <!-- Champ pour le mot de passe -->
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:autofillHints="password"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <!-- Bouton de création de compte -->
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:text="@string/register"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</FrameLayout>

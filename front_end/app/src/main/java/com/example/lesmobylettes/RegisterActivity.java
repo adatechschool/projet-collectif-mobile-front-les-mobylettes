@@ -1,6 +1,9 @@
 package com.example.lesmobylettes;
 
 
+
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,9 +11,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.SharedPreferences;
+
+
+import com.example.lesmobylettes.databinding.ActivityRegisterBinding;
 
 public class RegisterActivity extends AppCompatActivity {
-
+    private ActivityRegisterBinding binding;
     private EditText emailEditText;
     private EditText usernameEditText;
     private EditText passwordEditText;
@@ -20,6 +27,9 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        binding = ActivityRegisterBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         // Liaison des vues XML avec les variables Java
         emailEditText = findViewById(R.id.email_edit_text);
@@ -51,11 +61,18 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (password.length() < 6) {
-                    passwordEditText.setError("Le mot de passe doit contenir au moins 6 caractères");
+                if (password.length() < 8) {
+                    passwordEditText.setError("Le mot de passe doit contenir au moins 8 caractères");
                     return;
                 }
 
+                // Sauvegarde des données utilisateur dans SharedPreferences
+                SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("email", email);
+                editor.putString("username", username);
+                editor.putString("password", password);
+                editor.apply();
                 // Code pour enregistrer l'utilisateur (base de données, Firebase, etc.)
                 // Exemple: ajout dans une base de données SQLite ou un appel à une API
                 // Ici, nous allons simplement afficher un message de réussite

@@ -48,7 +48,7 @@
         <!-- Champ de saisie pour l'email -->
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
@@ -57,11 +57,11 @@
             android:layout_marginHorizontal="12dp"
             android:textColor="@color/black"
             android:inputType="textEmailAddress"
-            android:hint="@string/main_user_id"
+            android:hint="@string/main_user_email"
             android:autofillHints="emailAddress"/>
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12dp"
