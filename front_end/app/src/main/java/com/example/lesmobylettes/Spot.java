@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-// Activité qui affiche les détails d'un spot
+
 public class Spot extends AppCompatActivity {
     private TextView nameTextView;
     private TextView descriptionTextView;
