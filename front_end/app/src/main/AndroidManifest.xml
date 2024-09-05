@@ -36,6 +36,10 @@
             android:name=".RegisterActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_api_key" />
