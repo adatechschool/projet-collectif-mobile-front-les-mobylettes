@@ -6,11 +6,11 @@
     <string name="previous">Précédent</string>
     <string name="main_title">Bienvenue sur la bonne soeurf!</string>
     <string name="main_login_button">Se connecter</string>
+    <string name="list_spot_button">trouve ton spot</string>
     <string name="main_registration_button">Créer un compte</string>
     <string name="app_information">Les meilleurs spots de surf</string>
     <string name="image_information">Nonne qui surf</string>
     <string name="main_user_identification">example@email.com</string>
-    <string name="main_list_spot_button">Cherche ton Spot</string>
 
 
 </resources>

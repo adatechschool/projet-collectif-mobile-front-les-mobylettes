@@ -6,7 +6,6 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="main_title">Welcome to the bonnes soeurf!</string>
     <string name="main_login_button">Log in</string>
     <string name="list_spot_button">Find Your Spot</string>
@@ -14,5 +13,5 @@
     <string name="app_information">best spots of surf</string>
     <string name="image_information">A surfing nun</string>
     <string name="main_user_identification">example@mail.com</string>
-    <string name ="map_api_key">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
+    <string name ="map_api_key" translatable="false">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
 </resources>

@@ -1,12 +1,9 @@
 package com.example.lesmobylettes;
 
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
-
-
 
 public class SpotList extends AppCompatActivity {
 
@@ -28,5 +25,15 @@ public class SpotList extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spots);
         listView.setAdapter(arrayAdapter);
+    }
+
+    public String getGeocode() {
+
+        return "getGeocode";
+    }
+
+    public String getDestination() {
+
+        return "getDestination";
     }
 }
