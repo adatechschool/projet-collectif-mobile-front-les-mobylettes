@@ -10,12 +10,13 @@
     <string name="main_registration_button">Créer un compte</string>
     <string name="app_information">Les meilleurs spots de surf</string>
     <string name="image_information">Nonne qui surf</string>
-    <string name="main_user_id">exemple@email.com</string>
+    <string name="main_user_email">exemple@email.com</string>
     <string name="main_user_password">Mot de passe</string>
     <string name="register_button">S\'enregistrer</string>
     <string name="register">S\'enregistrer</string>
     <string name="hint_username">Choisis ton nom d\'utilisateur</string>
     <string name="hint_email">exemple@email.com</string>
+    <string name="hint_password">motDePasse1234</string>
 
 
 </resources>

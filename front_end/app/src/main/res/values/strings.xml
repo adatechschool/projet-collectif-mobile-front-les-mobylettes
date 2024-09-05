@@ -7,17 +7,18 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="main_title">Welcome to the bonnes soeurf!</string>
+    <string name="main_title">Welcome to the bonnes soeurfs!</string>
     <string name="main_login_button">Log in</string>
     <string name="list_spot_button">Find Your Spot</string>
     <string name="main_registration_button">Registration</string>
     <string name="app_information">best spots of surf</string>
     <string name="image_information">A surfing nun</string>
-    <string name="main_user_id">example@mail.com</string>
+    <string name="main_user_email">example@mail.com</string>
     <string name="main_user_password">Password</string>
     <string name="register">Register</string>
     <string name="hint_username">Choose your username</string>
     <string name="register_button">Register</string>
     <string name="hint_email">example@email.com</string>
-    <string name ="map_api_key">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
+    <string name="hint_password">password1234</string>
+    <string name ="map_api_key" translatable="false">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
 </resources>
