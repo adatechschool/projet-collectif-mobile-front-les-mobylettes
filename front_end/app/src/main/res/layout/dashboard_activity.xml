@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".DashboardActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Message de bienvenue -->
+    <TextView
+        android:id="@+id/welcome_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="24dp"
+        android:text="Welcome!" />
+
+    <!-- Exemple de bouton 1 -->
+    <Button
+        android:id="@+id/dashboard_button_spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option 1"
+        android:layout_marginBottom="16dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
+    <!-- Exemple de bouton 2 -->
+    <Button
+        android:id="@+id/button_option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option 2"
+        android:layout_marginBottom="16dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"/>
+
+    <!-- Exemple de bouton de déconnexion -->
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:background="@color/red"
+        android:textColor="@color/white"/>
+</LinearLayout>

@@ -52,7 +52,7 @@ dependencies {
     implementation(libs.gson)
 
     implementation(libs.glide)
-    annotationProcessor("com.github.bumptech.glide:compiler:${libs.versions.glide.get()}")
+    annotationProcessor(libs.compiler)
     implementation ("com.google.android.gms:play-services-maps:19.0.0")
 
 

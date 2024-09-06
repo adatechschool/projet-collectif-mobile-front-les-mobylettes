@@ -21,4 +21,5 @@
     <string name="hint_email">example@email.com</string>
     <string name="hint_password">password1234</string>
     <string name ="map_api_key" translatable="false">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
+    <string name="dashboard_welcome_text">Welcome, %1$ </string>
 </resources>
