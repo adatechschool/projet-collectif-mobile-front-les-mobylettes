@@ -8,17 +8,15 @@ import android.widget.ListView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SpotList extends AppCompatActivity {
 
     private ListView listView;
-    private List<SpotData.Spot> spotList = new ArrayList<>();
+    private List<SpotData.Record> spotList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,27 +42,32 @@ public class SpotList extends AppCompatActivity {
 
             Gson gson = new Gson();
             String jsonResponse = jsonBuilder.toString();
-            Type listType = new TypeToken<SpotData.Response>() {}.getType();
-            SpotData.Response spotResponse = gson.fromJson(jsonResponse, listType);
+            SpotData.Response spotResponse = gson.fromJson(jsonResponse, SpotData.Response.class);
 
             spotList = spotResponse.records;
 
             List<String> spotNames = new ArrayList<>();
-            for (SpotData.Spot spot : spotList) {
-                spotNames.add(spot.surfBreak); // Use surfBreak for the name
+            for (SpotData.Record record : spotList) {
+                spotNames.add(record.fields.destination);
             }
 
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, spotNames);
             listView.setAdapter(arrayAdapter);
 
             listView.setOnItemClickListener((parent, view, position, id) -> {
-                SpotData.Spot selectedSpot = spotList.get(position);
+                SpotData.Record selectedSpot = spotList.get(position);
 
-                Intent intent = new Intent(SpotList.this, Spot.class); // Correct activity class name
+                Intent intent = new Intent(SpotList.this, Spot.class);
 
-                intent.putExtra("surf_break", selectedSpot.surfBreak);
-                intent.putExtra("photos", selectedSpot.photos);
-                intent.putExtra("address", selectedSpot.address);
+                intent.putExtra("destination", selectedSpot.fields.destination);
+                intent.putExtra("surfBreak", selectedSpot.fields.surfBreak.get(0));
+                intent.putExtra("address", selectedSpot.fields.address);
+                intent.putExtra("difficultyLevel", selectedSpot.fields.difficultyLevel);
+                intent.putExtra("peakSurfSeasonBegins", selectedSpot.fields.peakSurfSeasonBegins);
+                intent.putExtra("peakSurfSeasonEnds", selectedSpot.fields.peakSurfSeasonEnds);
+                if (selectedSpot.fields.photos != null && !selectedSpot.fields.photos.isEmpty()) {
+                    intent.putExtra("photoUrl", selectedSpot.fields.photos.get(0).url);
+                }
 
                 startActivity(intent);
             });
