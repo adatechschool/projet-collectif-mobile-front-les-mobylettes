@@ -1,12 +1,10 @@
+
 <resources>
     <string name="app_name">Les mobylettes</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="main_title">Welcome to the bonnes soeurfs!</string>
     <string name="main_login_button">Log in</string>
     <string name="list_spot_button">Find Your Spot</string>
@@ -20,6 +18,6 @@
     <string name="register_button">Register</string>
     <string name="hint_email">example@email.com</string>
     <string name="hint_password">password1234</string>
-    <string name ="map_api_key" translatable="false">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
+    <string name="map_api_key" translatable="false">AIzaSyA-RAOg04SQoZECfuItHGnawneDV7UPLbs</string>
     <string name="dashboard_welcome_text">Welcome, %1$ </string>
 </resources>

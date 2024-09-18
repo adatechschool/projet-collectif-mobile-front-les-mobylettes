@@ -1,4 +1,4 @@
-package com.example.lesmobylettes;
+package com.example.les_mobylettes;
 
 
 
@@ -14,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 
 
-import com.example.lesmobylettes.databinding.ActivityRegisterBinding;
+import com.example.les_mobylettes.MainActivity;
+import com.example.les_mobylettes.databinding.ActivityRegisterBinding;
 
 public class RegisterActivity extends AppCompatActivity {
     private ActivityRegisterBinding binding;

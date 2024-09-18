@@ -1,4 +1,4 @@
-package com.example.lesmobylettes;
+package com.example.les_mobylettes;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ import android.content.SharedPreferences;
 //import androidx.navigation.ui.AppBarConfiguration;
 //import androidx.navigation.ui.NavigationUI;*/
 
-import com.example.lesmobylettes.databinding.ActivityMainBinding;
+import com.example.les_mobylettes.databinding.ActivityMainBinding;
 
 //import android.view.Menu;
 //import android.view.MenuItem;*/
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 // Action pour le bouton Register
                 Toast.makeText(MainActivity.this, "Register button clicked", Toast.LENGTH_SHORT).show();
                 // Redirection vers l'activité principale après la création du compte
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(MainActivity.this, com.example.les_mobylettes.RegisterActivity.class);
                 startActivity(intent);
                 finish();  // Ferme l'activité de création de compte
             }

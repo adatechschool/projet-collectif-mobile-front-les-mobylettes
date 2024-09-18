@@ -1,4 +1,4 @@
-package com.example.lesmobylettes;
+package com.example.les_mobylettes;
 
 import org.junit.Test;
 
